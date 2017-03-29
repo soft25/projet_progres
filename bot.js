@@ -29,7 +29,7 @@ client.on('message', message => {
 			  console.log(response.data);
 			  var l = response.data.list;
 			  var i;
-			  for(i = 0; i < l.length(); i++){
+			  for(i = 0; i < l.length; i++){
 			    if(l.dt_txt.split(" ")[0] == "2017-03-30")
 			      message.reply(l.main.temp_min+" "+l.main.temp_max);
 			  }
