@@ -22,7 +22,7 @@ client.on('message', message => {
 client.on('presenceUpdate', function(oldMember, newMember) {
   console.log(oldMember.presence, '=>', newMember.presence);
   
-  if(oldMember.presence.status == 'offline' && newMember.presence.status == 'online' && newMember.user.name == "sofianeK"){
+  if(oldMember.presence.status == 'offline' && newMember.presence.status == 'online' && newMember.user.name == "sofiane_app"){
     newMember.channel.sendMessage(newMember, "Bonjour maitre, je suis le bot de BETOMBO et KIRATI, que puis-je faire pour vous aujourd'hui?");
   }
 });
