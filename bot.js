@@ -18,7 +18,7 @@ client.on('message', message => {
       axios.get("http://www.chucknorrisfacts.fr/api/get?data=tri:alea;nb:1")
 	    .then(function (response) {
 			  console.log(response.data);
-	    	message.reply(response.fact);
+	    	message.reply(response.data.fact);
   		});
     }
     else if(message.channel.type == 'dm'){
