@@ -20,7 +20,7 @@ client.on('message', message => {
 });
 
 client.on('presenceUpdate', function(oldMember, newMember) {
-  console.log(oldMember.presence, '=>', newMember.presence);
+  console.log(oldMember.user.username, '=>', newMember.presence);
   
   if(newMember.presence.status == 'online' && newMember.user.username == "bramas"){
     newMember.user.sendMessage("Bonjour maitre, je suis le bot de BETOMBO et KIRATI, que puis-je faire pour vous aujourd'hui?");
