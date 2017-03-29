@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const axios =  require('axios');
 
 client.on('ready', () => {
   console.log('I am ready!');
@@ -15,6 +16,13 @@ client.on('message', message => {
     }
     else if(message.channel.type == 'dm'){
       message.reply('Hi');
+    }
+    else if(message.content === '!blague'){
+      axios.get("http://www.chucknorrisfacts.fr/api/get?data=tri:alea;nb:1")
+	    .then(function (response) {
+			  console.log(response.data);
+	    	message.reply(response.fact);
+  		});
     }
   }
   
