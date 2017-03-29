@@ -9,7 +9,7 @@ client.on('message', message => {
   if (message.content === 'ping') {
     message.reply('pong');
   }
-  else if(message.mentions.users.get(client.user.id) && message.author.bot){
+  else if(message.mentions.users.get(client.user.id)){
     message.reply('hehe');
   }
   else if(!message.author.bot){
