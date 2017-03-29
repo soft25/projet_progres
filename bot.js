@@ -31,7 +31,7 @@ client.on('message', message => {
 			  var i;
 			  for(i = 0; i < l.length; i++){
 			    if(l[i].dt_txt.split(" ")[0] == "2017-03-30")
-			      message.reply(l[i].main.temp_min+" "+l[i].main.temp_max);
+			      message.reply("dt " + l[i].dt_txt + " min " + l[i].main.temp_min+" max "+l[i].main.temp_max);
 			  }
   		});
     }
