@@ -9,12 +9,16 @@ client.on('message', message => {
   if (message.content === 'ping') {
     message.reply('pong');
   }
+  else if(!message.author.bot){
+    message.reply('Hi');
+  }
   
   console.log(message);
 });
 
 client.on('presenceUpdate', function(oldMember, newMember) {
   console.log(oldMember.presence, '=>', newMember.presence);
+  
 });
 
 client.login(process.env.DISCORD_TOKEN);
