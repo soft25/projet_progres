@@ -14,15 +14,15 @@ client.on('message', message => {
     else if(message.mentions.users.get(client.user.id)){
       message.reply('hehe');
     }
-    else if(message.channel.type == 'dm'){
-      message.reply('Hi');
-    }
     else if(message.content === '!blague'){
       axios.get("http://www.chucknorrisfacts.fr/api/get?data=tri:alea;nb:1")
 	    .then(function (response) {
 			  console.log(response.data);
 	    	message.reply(response.fact);
   		});
+    }
+    else if(message.channel.type == 'dm'){
+      message.reply('Hi');
     }
   }
   
