@@ -35,6 +35,10 @@ client.on('message', message => {
 			  }
   		});
     }
+    else if(message.content="!imag"){
+           
+    
+    }
     else if(message.channel.type == 'dm'){
       message.reply('Hi');
     }
