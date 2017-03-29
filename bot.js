@@ -15,6 +15,9 @@ client.on('message', message => {
   else if(!message.author.bot){
     message.reply('Hi');
   }
+  else {
+    message.reply('Je n\'ai pas compris votre requête');
+  }
   
   console.log(message);
 });
