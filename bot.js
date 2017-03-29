@@ -27,7 +27,12 @@ client.on('message', message => {
       axios.get(site)
 	    .then(function (response) {
 			  console.log(response.data);
-	    	//message.reply(response.data[0].fact);
+			  var l = response.data.list;
+			  var i;
+			  for(i = 0; i < l.length(); i++){
+			    if(l.dt_txt.split(" ")[0] == "2017-03-30")
+			      message.reply(l.main.temp_min+" "+l.main.temp_max);
+			  }
   		});
     }
     else if(message.channel.type == 'dm'){
