@@ -21,8 +21,8 @@ client.on('message', message => {
 	    	message.reply(response.data[0].fact);
   		});
     }
-    else if(message.content.split()[0] === '!meteo'){
-      var ville = message.content.split()[1];
+    else if(message.content.split(" ")[0] == '!meteo'){
+      var ville = message.content.split(" ")[1];
       var site = "http://openweathermap.org/data/2.5/forecast?q="+ville+"&appid=b1b15e88fa797225412429c1c50c122a1";
       axios.get(site)
 	    .then(function (response) {
