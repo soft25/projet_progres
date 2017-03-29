@@ -6,14 +6,16 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === 'ping') {
-    message.reply('pong');
-  }
-  else if(message.mentions.users.get(client.user.id)){
-    message.reply('hehe');
-  }
-  else if(!message.author.bot){
-    message.reply('Hi');
+  if(!message.author.bot){
+    if (message.content === 'ping') {
+      message.reply('pong');
+    }
+    else if(message.mentions.users.get(client.user.id)){
+      message.reply('hehe');
+    }
+    else if(message.channel.type == 'dm'){
+      message.reply('Hi');
+    }
   }
   
   console.log(message);
